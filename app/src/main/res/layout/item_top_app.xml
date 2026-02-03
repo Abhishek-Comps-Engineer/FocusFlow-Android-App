@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp">
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="App Icon" />
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="App Name"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/appIcon"
+        app:layout_constraintTop_toTopOf="@id/appIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/tv_app_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1h 20m"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tv_app_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_name"
+        app:layout_constraintBottom_toBottomOf="@id/appIcon"/>
+
+    <ProgressBar
+        android:id="@+id/progress_usage"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_4sdp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progress="50"
+        android:max="100"
+        app:layout_constraintStart_toStartOf="@id/tv_app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_time"
+        android:layout_marginTop="@dimen/_4sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
